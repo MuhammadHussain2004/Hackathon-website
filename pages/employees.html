@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employees | HCM Lite</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="container app-header-inner">
+      <a class="brand-logo" href="admin.html"><img src="../images/hcm-logo.png" alt="HCM Lite"></a>
+      <nav aria-label="Admin navigation">
+        <ul class="app-nav">
+          <li><a href="admin.html">Dashboard</a></li>
+          <li><a class="active" aria-current="page" href="employees.html">Employees</a></li>
+          <li><a href="leaves.html">Leave Requests</a></li>
+          <li><a href="settings.html">Settings</a></li>
+          <li><a href="payslip.html">Payslip</a></li>
+          <li><a class="exit-link" href="admin-auth.html">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container pb-5">
+    <div class="page-intro">
+      <span class="eyebrow">People directory</span>
+      <h1 class="mt-2 mb-2">Manage Employees</h1>
+      <p>Sample employee directory for Crescent Digital.</p>
+    </div>
+
+    <section class="panel">
+      <h2 class="panel-title">Add Employee</h2>
+      <form>
+        <div class="row g-3">
+          <div class="col-md-6"><label class="form-label w-100">Full Name<input class="form-control mt-1" required type="text" placeholder="Employee name"></label></div>
+          <div class="col-md-6"><label class="form-label w-100">Department<input class="form-control mt-1" required type="text" placeholder="Department"></label></div>
+          <div class="col-md-6"><label class="form-label w-100">Email<input class="form-control mt-1" required type="email" placeholder="name@example.com"></label></div>
+          <div class="col-md-6"><label class="form-label w-100">Password<input class="form-control mt-1" required type="password" placeholder="Demo password"></label></div>
+          <div class="col-md-6"><label class="form-label w-100">Monthly Salary<input class="form-control mt-1" required type="number" min="0.01" step="0.01" placeholder="Amount"></label></div>
+        </div>
+        <button class="btn btn-primary mt-4" type="button">Add Employee</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="d-flex justify-content-between align-items-end flex-wrap gap-2 mb-3">
+        <h2 class="mb-0">Employee List</h2>
+        <span class="field-note">5 sample employees</span>
+      </div>
+      <div class="row g-3 mb-3">
+        <div class="col-md-6"><label class="form-label w-100">Search by name or email<input class="form-control mt-1" type="search" placeholder="Search employees"></label></div>
+        <div class="col-md-4"><label class="form-label w-100">Department filter<input class="form-control mt-1" type="text" placeholder="Department"></label></div>
+        <div class="col-md-2 d-flex align-items-end"><button class="btn btn-outline-primary w-100" type="button">Search</button></div>
+      </div>
+      <div class="table-shell">
+        <table class="table">
+          <thead><tr><th>ID</th><th>Name</th><th>Email</th><th>Department</th><th>Salary</th><th>Actions</th></tr></thead>
+          <tbody>
+            <tr><td>EMP-001</td><td>Ayesha Khan</td><td>ayesha@example.com</td><td>Operations</td><td>PKR 85,000</td><td><button class="btn btn-outline-primary btn-sm" type="button">Edit</button> <button class="btn btn-outline-secondary btn-sm" type="button">Delete</button></td></tr>
+            <tr><td>EMP-002</td><td>Hamza Ali</td><td>hamza@example.com</td><td>Engineering</td><td>PKR 120,000</td><td><button class="btn btn-outline-primary btn-sm" type="button">Edit</button> <button class="btn btn-outline-secondary btn-sm" type="button">Delete</button></td></tr>
+            <tr><td>EMP-003</td><td>Sara Ahmed</td><td>sara@example.com</td><td>HR</td><td>PKR 95,000</td><td><button class="btn btn-outline-primary btn-sm" type="button">Edit</button> <button class="btn btn-outline-secondary btn-sm" type="button">Delete</button></td></tr>
+            <tr><td>EMP-004</td><td>Bilal Raza</td><td>bilal@example.com</td><td>Design</td><td>PKR 90,000</td><td><button class="btn btn-outline-primary btn-sm" type="button">Edit</button> <button class="btn btn-outline-secondary btn-sm" type="button">Delete</button></td></tr>
+            <tr><td>EMP-005</td><td>Mariam Noor</td><td>mariam@example.com</td><td>Finance</td><td>PKR 110,000</td><td><button class="btn btn-outline-primary btn-sm" type="button">Edit</button> <button class="btn btn-outline-secondary btn-sm" type="button">Delete</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="field-note mb-0 mt-3">Search, filters, Edit and Delete are UI previews and do not change these sample records.</p>
+    </section>
+
+    <section class="panel">
+      <h2 class="panel-title">Edit Employee</h2>
+      <p class="field-note">Example record: Bilal Raza (EMP-004). Changes are not saved.</p>
+      <form>
+        <div class="row g-3">
+          <div class="col-md-6"><label class="form-label w-100">Employee Name<input class="form-control mt-1" required type="text" value="Bilal Raza"></label></div>
+          <div class="col-md-6"><label class="form-label w-100">Employee Email<input class="form-control mt-1" required type="email" value="bilal@example.com"></label></div>
+          <div class="col-md-6"><label class="form-label w-100">Department<input class="form-control mt-1" required type="text" value="Design"></label></div>
+          <div class="col-md-6"><label class="form-label w-100">Monthly Salary<input class="form-control mt-1" required type="number" min="0.01" step="0.01" value="90000"></label></div>
+        </div>
+        <button class="btn btn-outline-primary mt-4" type="button">Save Changes</button>
+      </form>
+    </section>
+    <p class="field-note">This is a static demo. Buttons do not save employee data.</p>
+  </main>
+</body>
+</html>

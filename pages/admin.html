@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | HCM Lite</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="container app-header-inner">
+      <a class="brand-logo" href="admin.html"><img src="../images/hcm-logo.png" alt="HCM Lite"></a>
+      <nav aria-label="Admin navigation">
+        <ul class="app-nav">
+          <li><a class="active" aria-current="page" href="admin.html">Dashboard</a></li>
+          <li><a href="employees.html">Employees</a></li>
+          <li><a href="leaves.html">Leave Requests</a></li>
+          <li><a href="settings.html">Settings</a></li>
+          <li><a href="payslip.html">Payslip</a></li>
+          <li><a class="exit-link" href="admin-auth.html">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container pb-5">
+    <div class="page-intro">
+      <span class="eyebrow">Company overview</span>
+      <h1 class="mt-2 mb-2">Admin Dashboard</h1>
+      <p>Crescent Digital sample data for Friday, 23 October 2026. Attendance, requests and updates in one place.</p>
+    </div>
+
+    <section aria-label="Company summary" class="mb-4">
+      <div class="row g-3">
+        <div class="col-sm-6 col-lg-4 col-xl-2"><div class="metric-card"><p class="metric-label">Total Employees</p><p class="metric-value">5</p></div></div>
+        <div class="col-sm-6 col-lg-4 col-xl-2"><div class="metric-card"><p class="metric-label">Present</p><p class="metric-value">1</p></div></div>
+        <div class="col-sm-6 col-lg-4 col-xl-2"><div class="metric-card"><p class="metric-label">Late</p><p class="metric-value">1</p></div></div>
+        <div class="col-sm-6 col-lg-4 col-xl-2"><div class="metric-card"><p class="metric-label">Pending Leaves</p><p class="metric-value">1</p></div></div>
+        <div class="col-sm-6 col-lg-4 col-xl-2"><div class="metric-card"><p class="metric-label">On Leave</p><p class="metric-value">1</p></div></div>
+        <div class="col-sm-6 col-lg-4 col-xl-2"><div class="metric-card"><p class="metric-label">Absent</p><p class="metric-value">1</p></div></div>
+      </div>
+    </section>
+
+    <div class="row g-4">
+      <div class="col-lg-8">
+        <section class="panel h-100">
+          <h2 class="panel-title">Attendance · 23 October 2026</h2>
+          <div class="table-shell">
+            <table class="table">
+              <thead><tr><th>Employee</th><th>Department</th><th>Check-in</th><th>Check-out</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>Ayesha Khan</td><td>Operations</td><td>09:03</td><td>17:05</td><td><span class="badge text-bg-success">Present</span></td></tr>
+                <tr><td>Hamza Ali</td><td>Engineering</td><td>09:22</td><td>17:30</td><td><span class="badge text-bg-warning">Late</span></td></tr>
+                <tr><td>Sara Ahmed</td><td>HR</td><td>—</td><td>—</td><td><span class="badge text-bg-info">On Leave</span></td></tr>
+                <tr><td>Bilal Raza</td><td>Design</td><td>09:05</td><td>13:20</td><td><span class="badge text-bg-secondary">Half Day</span></td></tr>
+                <tr><td>Mariam Noor</td><td>Finance</td><td>—</td><td>—</td><td><span class="badge text-bg-danger">Absent</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="field-note mt-3 mb-0">Attendance is a fixed example for the sample date.</p>
+        </section>
+      </div>
+      <div class="col-lg-4">
+        <section class="panel h-100">
+          <h2 class="panel-title">Pending Leave Requests</h2>
+          <p class="mb-2"><strong>Bilal Raza</strong> · Casual leave</p>
+          <p class="muted-text mb-2">26–27 October 2026 · 2 working days</p>
+          <p class="mb-3"><span class="badge text-bg-warning">Pending</span></p>
+          <a class="btn btn-outline-primary" href="leaves.html">Open Leave Requests</a>
+        </section>
+      </div>
+      <div class="col-lg-6">
+        <section class="panel h-100">
+          <h2 class="panel-title">Announcements</h2>
+          <label class="form-label w-100">New announcement
+            <textarea class="form-control mt-1" rows="3" placeholder="Write an update for employees"></textarea>
+          </label>
+          <button class="btn btn-primary mt-2" type="button">Post Announcement</button>
+          <div class="answer-box mt-4"><strong>October town hall</strong><br>Friday, 30 October at 3:00 PM.</div>
+          <div class="answer-box mt-2"><strong>Timesheet reminder</strong><br>Submit October timesheets by 29 October.</div>
+        </section>
+      </div>
+      <div class="col-lg-6">
+        <section class="panel h-100">
+          <h2 class="panel-title">Smart Helper</h2>
+          <label class="form-label w-100">Ask a question
+            <textarea class="form-control mt-1" rows="3" placeholder="For example: Who is on leave today?"></textarea>
+          </label>
+          <button class="btn btn-outline-primary mt-2" type="button">Ask Helper</button>
+          <h3 class="mt-4 mb-2">Answer</h3>
+          <p class="answer-box mb-0"><strong>Sample answer:</strong> Sara Ahmed is on approved leave on 23 October 2026.</p>
+        </section>
+      </div>
+    </div>
+    <p class="field-note mt-2">All records are sample data. Buttons do not save or calculate data.</p>
+  </main>
+</body>
+</html>

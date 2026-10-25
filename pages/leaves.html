@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leave Requests | HCM Lite</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="container app-header-inner">
+      <a class="brand-logo" href="admin.html"><img src="../images/hcm-logo.png" alt="HCM Lite"></a>
+      <nav aria-label="Admin navigation">
+        <ul class="app-nav">
+          <li><a href="admin.html">Dashboard</a></li>
+          <li><a href="employees.html">Employees</a></li>
+          <li><a class="active" aria-current="page" href="leaves.html">Leave Requests</a></li>
+          <li><a href="settings.html">Settings</a></li>
+          <li><a href="payslip.html">Payslip</a></li>
+          <li><a class="exit-link" href="admin-auth.html">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container pb-5">
+    <div class="page-intro">
+      <span class="eyebrow">Time off</span>
+      <h1 class="mt-2 mb-2">Leave Requests</h1>
+      <p>Sample requests for Crescent Digital. Review decisions are shown for illustration.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-12">
+        <section class="panel">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+            <h2 class="mb-0">All Leave Requests</h2>
+            <span class="badge text-bg-warning">1 pending request</span>
+          </div>
+          <div class="table-shell">
+            <table class="table">
+              <thead><tr><th>Employee</th><th>Type</th><th>From</th><th>To</th><th>Working Days</th><th>Reason</th><th>Status</th><th>Admin Comment</th><th>Actions</th></tr></thead>
+              <tbody>
+                <tr><td>Bilal Raza</td><td>Casual</td><td>26 Oct 2026</td><td>27 Oct 2026</td><td>2</td><td>Family appointment</td><td><span class="badge text-bg-warning">Pending</span></td><td>Awaiting review</td><td><button class="btn btn-outline-primary btn-sm" type="button">Review</button></td></tr>
+                <tr><td>Sara Ahmed</td><td>Casual</td><td>23 Oct 2026</td><td>23 Oct 2026</td><td>1</td><td>Personal work</td><td><span class="badge text-bg-success">Approved</span></td><td>Approved for one day</td><td>—</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="field-note mt-3 mb-0">Working days follow the Monday–Friday schedule in Settings.</p>
+        </section>
+      </div>
+      <div class="col-12">
+        <section class="panel">
+          <h2 class="panel-title">Review Request</h2>
+          <p class="field-note">Showing Bilal Raza's pending request for 26–27 October 2026.</p>
+          <label class="form-label w-100">Admin Comment
+            <textarea class="form-control mt-1" rows="4" placeholder="Write a decision note"></textarea>
+          </label>
+          <div class="d-flex flex-wrap gap-2 mt-3">
+            <button class="btn btn-primary" type="button">Approve</button>
+            <button class="btn btn-outline-secondary" type="button">Reject</button>
+          </div>
+        </section>
+      </div>
+    </div>
+    <p class="field-note mt-3">This is a static demo. Review buttons do not change a request.</p>
+  </main>
+</body>
+</html>

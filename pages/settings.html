@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Settings | HCM Lite</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="container app-header-inner">
+      <a class="brand-logo" href="admin.html"><img src="../images/hcm-logo.png" alt="HCM Lite"></a>
+      <nav aria-label="Admin navigation">
+        <ul class="app-nav">
+          <li><a href="admin.html">Dashboard</a></li>
+          <li><a href="employees.html">Employees</a></li>
+          <li><a href="leaves.html">Leave Requests</a></li>
+          <li><a class="active" aria-current="page" href="settings.html">Settings</a></li>
+          <li><a href="payslip.html">Payslip</a></li>
+          <li><a class="exit-link" href="admin-auth.html">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container pb-5">
+    <div class="page-intro">
+      <span class="eyebrow">Workspace rules</span>
+      <h1 class="mt-2 mb-2">Company Settings</h1>
+      <p>Sample settings for Crescent Digital. Values shown here match the demo records.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-8">
+        <section class="panel h-100">
+          <h2 class="panel-title">Company Rules</h2>
+          <form>
+            <div class="row g-3">
+              <div class="col-12"><label class="form-label w-100">Company Name<input class="form-control mt-1" required type="text" value="Crescent Digital"></label></div>
+              <div class="col-md-4"><label class="form-label w-100">Office Start Time<input class="form-control mt-1" required type="time" value="09:00"></label></div>
+              <div class="col-md-4"><label class="form-label w-100">Grace Minutes<input class="form-control mt-1" required type="number" min="0" step="1" value="15"></label></div>
+              <div class="col-md-4"><label class="form-label w-100">Yearly Leave Quota<input class="form-control mt-1" required type="number" min="0" step="1" value="20"></label></div>
+            </div>
+            <fieldset class="mt-4">
+              <legend class="h5 mb-3">Working Days</legend>
+              <div class="day-options">
+                <div class="form-check"><input class="form-check-input" id="mon" type="checkbox" checked><label class="form-check-label" for="mon">Monday</label></div>
+                <div class="form-check"><input class="form-check-input" id="tue" type="checkbox" checked><label class="form-check-label" for="tue">Tuesday</label></div>
+                <div class="form-check"><input class="form-check-input" id="wed" type="checkbox" checked><label class="form-check-label" for="wed">Wednesday</label></div>
+                <div class="form-check"><input class="form-check-input" id="thu" type="checkbox" checked><label class="form-check-label" for="thu">Thursday</label></div>
+                <div class="form-check"><input class="form-check-input" id="fri" type="checkbox" checked><label class="form-check-label" for="fri">Friday</label></div>
+                <div class="form-check"><input class="form-check-input" id="sat" type="checkbox"><label class="form-check-label" for="sat">Saturday</label></div>
+                <div class="form-check"><input class="form-check-input" id="sun" type="checkbox"><label class="form-check-label" for="sun">Sunday</label></div>
+              </div>
+            </fieldset>
+            <button class="btn btn-primary mt-4" type="button">Save Settings</button>
+          </form>
+        </section>
+      </div>
+      <div class="col-lg-4">
+        <section class="panel">
+          <h2 class="panel-title">Change Password</h2>
+          <form>
+            <div class="mb-3"><label class="form-label w-100">Current Password<input class="form-control mt-1" required type="password" placeholder="Current password"></label></div>
+            <div class="mb-3"><label class="form-label w-100">New Password<input class="form-control mt-1" required type="password" placeholder="New password"></label></div>
+            <div class="mb-3"><label class="form-label w-100">Confirm New Password<input class="form-control mt-1" required type="password" placeholder="Enter it again"></label></div>
+            <button class="btn btn-outline-primary" type="button">Change Password</button>
+          </form>
+        </section>
+      </div>
+    </div>
+    <p class="field-note mt-3">This is a static demo. Settings and passwords are not saved.</p>
+  </main>
+</body>
+</html>
